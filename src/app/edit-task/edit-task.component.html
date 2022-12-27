@@ -1,0 +1,40 @@
+  <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+              <div class="card-body py-4 px-4 px-md-5">
+  
+              <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                <i class="fas fa-check-square me-1">
+                    <fa-icon [icon]="faPen"></fa-icon>
+                </i>
+                <u>Edit Item</u>
+              </p>
+
+              <hr class="my-4">
+              
+              <form #f="ngForm" (ngSubmit)="editTask(f)">
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label for="inputCity">Libellé : </label>
+                    <input type="text" class="form-control" name="libelle" #libelle="ngModel" required ngModel value="{{taskToEdit.libelle}}">
+                  </div>
+                  <div class="form-group col-md-5">
+                    <label for="inputStatut">Etat d'avancement :</label>
+                    <select id="inputStatut" class="form-select" required #statut=""ngModel name="statut" ngModel>
+                      <option hidden selected>{{taskToEdit.statut}}</option>
+                      <option selected value="En attente" >En attente</option>
+                      <option value="En cours" >En cours</option>
+                      <option value="Terminé" >Terminé</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Modifier</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

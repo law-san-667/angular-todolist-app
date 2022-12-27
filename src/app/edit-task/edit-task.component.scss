@@ -1,0 +1,10 @@
+.form-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+button{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
