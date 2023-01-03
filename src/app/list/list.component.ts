@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare, faFilter } from '@fortawesome/free-solid-svg-icons';
 import { LoginService } from '../services/login-service';
 import { TaskService } from '../services/task-service';
 
@@ -15,7 +15,8 @@ export class ListComponent implements OnInit {
 
   list!: any;
   faCheck = faCheckSquare;
-  activeUser:any = null;
+  faSort = faFilter;
+  activeUser:any = undefined;
   
   constructor(private taskService: TaskService,
               private router: Router,
@@ -24,7 +25,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.loginService.getAll().subscribe(data => {
       this.activeUser = data[0]
-      if (this.activeUser == null)
+      if (this.activeUser == undefined)
         this.router.navigateByUrl("");
       else{
         this.taskService.getAll().

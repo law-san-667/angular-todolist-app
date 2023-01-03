@@ -1,4 +1,5 @@
 {
+  "logged": [],
   "list": [
     {
       "id": 1,
@@ -8,7 +9,7 @@
     },
     {
       "libelle": "Lire le cours sur JavaFx",
-      "statut": "En cours",
+      "statut": "Terminé",
       "user": "law",
       "id": 2
     },
@@ -25,10 +26,10 @@
       "user": "marshall"
     },
     {
-      "id": 5,
       "libelle": "Remplir ma bouteille",
-      "statut": "En attente",
-      "user": "luke"
+      "statut": "Terminé",
+      "user": "luke",
+      "id": 5
     },
     {
       "libelle": "Okay I think I know what was the problem !",
@@ -55,16 +56,44 @@
       "user": "law"
     },
     {
-      "id": 12,
-      "libelle": "Charger mes écouteurs",
+      "libelle": "Mettre le projet sur Github",
+      "statut": "Terminé",
+      "user": "admin",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "libelle": "Aller manger",
       "statut": "En attente",
       "user": "law"
     },
     {
-      "libelle": "Mettre le projet sur Github",
+      "libelle": "Faire le moov",
       "statut": "En cours",
-      "user": "admin",
-      "id": 13
+      "user": "law",
+      "id": 15
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "admin",
+      "password": "admin"
+    },
+    {
+      "login": "marshall",
+      "password": "eminem",
+      "id": 2
+    },
+    {
+      "login": "luke",
+      "password": "luke",
+      "id": 3
+    },
+    {
+      "login": "law",
+      "password": "law",
+      "id": 4
     }
   ]
 }

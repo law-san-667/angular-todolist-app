@@ -24,13 +24,11 @@
                   <option value="3" (click)="displayInProgress()">En cours</option>
                   <option value="4" (click)="displayNotStarted()">En attente</option>
                 </select>
-                <p class="small mb-0 ms-4 me-2 text-muted">Sort</p>
-                <select class="select">
-                  <option value="1">Added date</option>
-                  <option value="2">Due date</option>
-                </select>
+                
                 <a href="#!" style="color: #23af89;" data-mdb-toggle="tooltip" title="Ascending"><i
-                    class="fas fa-sort-amount-down-alt ms-2"></i></a>
+                    class="fas fa-sort-amount-down-alt ms-2">
+                    <fa-icon [icon]="faSort" ></fa-icon>
+                  </i></a>
               </div>
   
               <app-task *ngFor="let item of list" [task] = "item" ></app-task>

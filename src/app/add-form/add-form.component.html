@@ -5,8 +5,6 @@
           <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" #libelle="ngModel" required
             placeholder="Add new..." name="libelle" ngModel>
 
-          <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i
-              class="fas fa-calendar-alt fa-lg me-3"></i></a>
           <div class="btn_group">
             <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Add</button>
             <a class="btn btn-danger" (click)="logout()" >Log Out</a>
