@@ -1,17 +1,17 @@
 {
-  "logged": [],
+  "logged": [
+    {
+      "login": "luke",
+      "password": "luke",
+      "id": 3
+    }
+  ],
   "list": [
     {
       "id": 1,
       "libelle": "Faire le projet d'angular",
       "statut": "En cours",
       "user": "admin"
-    },
-    {
-      "libelle": "Lire le cours sur JavaFx",
-      "statut": "Terminé",
-      "user": "law",
-      "id": 2
     },
     {
       "id": 3,
@@ -24,12 +24,6 @@
       "libelle": "Faire le projet de java",
       "statut": "Terminé",
       "user": "marshall"
-    },
-    {
-      "libelle": "Remplir ma bouteille",
-      "statut": "Terminé",
-      "user": "luke",
-      "id": 5
     },
     {
       "libelle": "Okay I think I know what was the problem !",
@@ -50,10 +44,10 @@
       "user": "luke"
     },
     {
-      "id": 11,
       "libelle": "Envoyer le projet",
-      "statut": "En attente",
-      "user": "law"
+      "statut": "En cours",
+      "user": "law",
+      "id": 11
     },
     {
       "libelle": "Mettre le projet sur Github",
@@ -68,10 +62,28 @@
       "user": "law"
     },
     {
-      "libelle": "Faire le moov",
-      "statut": "En cours",
+      "libelle": "Faire les courses",
+      "statut": "En attente",
       "user": "law",
       "id": 15
+    },
+    {
+      "id": 16,
+      "libelle": "Faire les captures pour le document de projet",
+      "statut": "En attente",
+      "user": "law"
+    },
+    {
+      "libelle": "Aller à la salle de sport",
+      "statut": "En cours",
+      "user": "luke",
+      "id": 17
+    },
+    {
+      "libelle": "Faire le code du projet Angular",
+      "statut": "Terminé",
+      "user": "luke",
+      "id": 18
     }
   ],
   "users": [

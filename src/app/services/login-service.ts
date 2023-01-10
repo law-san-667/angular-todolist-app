@@ -7,7 +7,7 @@ import { User } from '../model/user';
 })
 
 export class LoginService {
-  url: string = "http://localhost:3001/logged";
+  url: string = "http://localhost:3000/logged";
 
   constructor(private http: HttpClient) {}
 

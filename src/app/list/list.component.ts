@@ -17,7 +17,11 @@ export class ListComponent implements OnInit {
   faCheck = faCheckSquare;
   faSort = faFilter;
   activeUser:any = undefined;
-  
+  nbTasks:number = 0;
+  endedTasks:number = 0;
+  currentTasks:number = 0;
+  unstartedTasks:number = 0;
+
   constructor(private taskService: TaskService,
               private router: Router,
               private loginService: LoginService) { }
@@ -29,7 +33,13 @@ export class ListComponent implements OnInit {
         this.router.navigateByUrl("");
       else{
         this.taskService.getAll().
-        subscribe(tasks => this.list = tasks.filter((task:any) => (task.user == this.activeUser.login)))    
+        subscribe(tasks => {
+          this.list = tasks.filter((task:any) => (task.user == this.activeUser.login));
+          this.nbTasks = this.list.length;
+          this.endedTasks = this.list.filter((task:any) => (task.statut == "Terminé")).length;
+          this.currentTasks = this.list.filter((task:any) => (task.statut == "En cours")).length;
+          this.unstartedTasks = this.list.filter((task:any) => (task.statut == "En attente")).length;
+        })    
       }
   
     }

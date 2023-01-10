@@ -8,3 +8,16 @@
   #list1 .select-input.form-control[readonly]:not([disabled]) {
     background-color: #fbfbfb;
   }
+  
+  .Terminé{
+    color: green;
+    font-weight:bold;
+}
+.En .cours{
+    color: orange;
+    font-weight:bold;
+}
+.En .attente{
+    color: gray;
+    font-weight:bold;
+}

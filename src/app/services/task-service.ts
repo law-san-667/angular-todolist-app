@@ -6,7 +6,7 @@ import { Task } from '../model/task';
   providedIn: 'root'
 })
 export class TaskService {
-  url: string = "http://localhost:3001/list";
+  url: string = "http://localhost:3000/list";
 
   constructor(private http: HttpClient) {}
 

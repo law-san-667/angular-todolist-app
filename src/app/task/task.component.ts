@@ -33,7 +33,7 @@ export class TaskComponent implements OnInit {
         if(this.activeUser == null)
           this.router.navigateByUrl("");
       });
-  }
+    }
 
   onDelete(){
 
@@ -45,11 +45,18 @@ export class TaskComponent implements OnInit {
         res => {
           console.log(res);
           this.taskService.getAll().
-          subscribe(data => this.listComponent.list = data.filter((t:any) => t.user == this.activeUser.login));  
+          subscribe(data =>{
+             this.listComponent.list = data.filter((t:any) => t.user == this.activeUser.login);
+             this.listComponent.nbTasks = this.listComponent.list.length;
+             this.listComponent.endedTasks = this.listComponent.list.filter((task:any) => (task.statut == "Terminé")).length;
+             this.listComponent.currentTasks = this.listComponent.list.filter((task:any) => (task.statut == "En cours")).length;
+             this.listComponent.unstartedTasks = this.listComponent.list.filter((task:any) => (task.statut == "En attente")).length;   
+             });  
         });  
     }
   }
   onEdit(){
+    
     if(this.activeUser  == null)
       this.router.navigateByUrl("");
 
